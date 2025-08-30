@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://cr5kexeop7amf"]
+
+[ext_resource type="Script" uid="uid://ccl5if8pbq3ye" path="res://pinya_kabalan.gd" id="1_d2iv8"]
+[ext_resource type="Texture2D" uid="uid://bn5xiog0au187" path="res://Food Enemies/Pineapple.png" id="1_plxgv"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_d2iv8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, -9)
+scale = Vector2(4, 4)
+texture = ExtResource("1_plxgv")

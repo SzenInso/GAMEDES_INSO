@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgpxev5f6cibd"]
+
+[ext_resource type="Script" uid="uid://ddkt65af2jkt7" path="res://tomato_kabalan.gd" id="1_2iio8"]
+[ext_resource type="Texture2D" uid="uid://vfoouapafahg" path="res://Food Enemies/Tomato.png" id="1_gtkrm"]
+
+[node name="kabalan 2" type="Node2D"]
+script = ExtResource("1_2iio8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(4, 4)
+texture = ExtResource("1_gtkrm")

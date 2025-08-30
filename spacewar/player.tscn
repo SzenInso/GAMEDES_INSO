@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://crpocqw7bawtw"]
+
+[ext_resource type="Texture2D" uid="uid://c8ss8b5cwadvu" path="res://graphics/playerPumpkin.png" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://b2ekdgiu7r8bu" path="res://player.gd" id="1_onrkg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_onrkg"]
+radius = 63.6553
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_onrkg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = -0.00872665
+texture = ExtResource("1_4flbx")
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3, 16)
+shape = SubResource("CircleShape2D_onrkg")

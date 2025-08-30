@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://dpahfncaudlty"]
+
+[ext_resource type="Texture2D" uid="uid://86834svipltv" path="res://graphics/cryng babii.png" id="1_iq183"]
+[ext_resource type="Script" uid="uid://ctnycaqypg51t" path="res://run_baby.gd" id="1_on0rc"]
+
+[node name="Run Baby" type="Node2D"]
+script = ExtResource("1_on0rc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(3, 0)
+scale = Vector2(0.431, 0.4)
+texture = ExtResource("1_iq183")

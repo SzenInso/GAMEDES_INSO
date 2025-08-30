@@ -1,0 +1,32 @@
+[gd_scene load_steps=7 format=3 uid="uid://1ldusmashdy8"]
+
+[ext_resource type="PackedScene" uid="uid://crpocqw7bawtw" path="res://player.tscn" id="1_f2txt"]
+[ext_resource type="PackedScene" uid="uid://ct4bef8w3bu1i" path="res://kabalan.tscn" id="2_1ainy"]
+[ext_resource type="PackedScene" uid="uid://dgpxev5f6cibd" path="res://tomato kabalan.tscn" id="3_n6hdu"]
+[ext_resource type="PackedScene" uid="uid://cr5kexeop7amf" path="res://pinya kabalan.tscn" id="4_km5ld"]
+[ext_resource type="Texture2D" uid="uid://nx2g4mxvx05r" path="res://graphics/halloweenbg.jpg" id="5_i2t4f"]
+[ext_resource type="PackedScene" uid="uid://dpahfncaudlty" path="res://run_baby.tscn" id="6_1ainy"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_f2txt")]
+position = Vector2(117, 186)
+
+[node name="Kabalan" parent="." instance=ExtResource("2_1ainy")]
+position = Vector2(1064, 279)
+
+[node name="kabalan 2" parent="." instance=ExtResource("3_n6hdu")]
+position = Vector2(854, 178)
+
+[node name="Run Baby" parent="." instance=ExtResource("6_1ainy")]
+
+[node name="Node2D" parent="." instance=ExtResource("4_km5ld")]
+position = Vector2(902, 452)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -1
+offset_left = -49.0
+offset_top = -9.0
+offset_right = 1175.0
+offset_bottom = 663.0
+texture = ExtResource("5_i2t4f")

@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://ct4bef8w3bu1i"]
+
+[ext_resource type="Texture2D" uid="uid://mjgieejlg2hh" path="res://Food Enemies/Steak.png" id="1_1g0kq"]
+[ext_resource type="Script" uid="uid://cuvmxjipvdo31" path="res://steak.gd" id="1_8p2vw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8p2vw"]
+radius = 44.3847
+
+[node name="Kabalan" type="CharacterBody2D"]
+script = ExtResource("1_8p2vw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(4, 4)
+texture = ExtResource("1_1g0kq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_8p2vw")
