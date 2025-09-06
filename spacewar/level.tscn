@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://1ldusmashdy8"]
+[gd_scene load_steps=9 format=3 uid="uid://1ldusmashdy8"]
 
 [ext_resource type="PackedScene" uid="uid://crpocqw7bawtw" path="res://player.tscn" id="1_f2txt"]
 [ext_resource type="PackedScene" uid="uid://ct4bef8w3bu1i" path="res://kabalan.tscn" id="2_1ainy"]
@@ -6,6 +6,12 @@
 [ext_resource type="PackedScene" uid="uid://cr5kexeop7amf" path="res://pinya kabalan.tscn" id="4_km5ld"]
 [ext_resource type="Texture2D" uid="uid://nx2g4mxvx05r" path="res://graphics/halloweenbg.jpg" id="5_i2t4f"]
 [ext_resource type="PackedScene" uid="uid://dpahfncaudlty" path="res://run_baby.tscn" id="6_1ainy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ainy"]
+size = Vector2(20.5, 670)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n6hdu"]
+size = Vector2(1174, 23)
 
 [node name="Node2D" type="Node2D"]
 
@@ -30,3 +36,29 @@ offset_top = -9.0
 offset_right = 1175.0
 offset_bottom = 663.0
 texture = ExtResource("5_i2t4f")
+
+[node name="Node2D2" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Node2D2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/StaticBody2D"]
+position = Vector2(1151, 328)
+shape = SubResource("RectangleShape2D_1ainy")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Node2D2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/StaticBody2D2"]
+position = Vector2(0, 330)
+shape = SubResource("RectangleShape2D_1ainy")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Node2D2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/StaticBody2D3"]
+position = Vector2(576, 3)
+shape = SubResource("RectangleShape2D_n6hdu")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Node2D2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/StaticBody2D4"]
+position = Vector2(570, 652)
+shape = SubResource("RectangleShape2D_n6hdu")

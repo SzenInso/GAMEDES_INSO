@@ -3,10 +3,13 @@
 [ext_resource type="Texture2D" uid="uid://86834svipltv" path="res://graphics/cryng babii.png" id="1_iq183"]
 [ext_resource type="Script" uid="uid://ctnycaqypg51t" path="res://run_baby.gd" id="1_on0rc"]
 
-[node name="Run Baby" type="Node2D"]
+[node name="Run Baby" type="CharacterBody2D"]
 script = ExtResource("1_on0rc")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(3, 0)
 scale = Vector2(0.431, 0.4)
 texture = ExtResource("1_iq183")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(5, -43, 14, -40, 18, -35, 19, -28, 19, -23, 17, -15, 19, -12, 25, -7, 28, -2, 33, 5, 34, 12, 39, 17, 40, 20, 38, 29, 31, 34, 19, 39, 13, 40, 8, 37, 3, 38, -12, 38, -20, 35, -26, 32, -28, 24, -27, 18, -19, 18, -23, 9, -22, 2, -21, -6, -16, -11, -12, -17, -8, -15, -7, -27, -8, -35, -6, -38)
