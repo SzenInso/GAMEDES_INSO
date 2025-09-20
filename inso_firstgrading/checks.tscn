@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbnkcpgbjv4mr"]
+
+[ext_resource type="Texture2D" uid="uid://bcvqxfhv8xsyr" path="res://assets/cars/Mark III_Checks.png" id="1_abtu2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vtj5t"]
+size = Vector2(29, 50)
+
+[node name="Checks" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_abtu2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 2)
+shape = SubResource("RectangleShape2D_vtj5t")

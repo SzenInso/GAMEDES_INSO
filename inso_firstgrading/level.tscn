@@ -1,0 +1,85 @@
+[gd_scene load_steps=11 format=3 uid="uid://cmyvitnqb1noi"]
+
+[ext_resource type="Texture2D" uid="uid://bi5dva7mxsinb" path="res://assets/background/track2.jpg" id="1_0b4ue"]
+[ext_resource type="Script" uid="uid://dlheadqtu5t82" path="res://node_2d_2.gd" id="1_f2txt"]
+[ext_resource type="Script" uid="uid://b88cdiecy2sb0" path="res://RaceMng't.gd" id="1_n6hdu"]
+[ext_resource type="PackedScene" uid="uid://cfhv2uf4u0d6s" path="res://player.tscn" id="1_u52ul"]
+[ext_resource type="Script" uid="uid://br107jr7r6w4k" path="res://player.gd" id="2_vonw3"]
+[ext_resource type="PackedScene" uid="uid://dpfhuebpsan51" path="res://car.tscn" id="4_f2txt"]
+[ext_resource type="Script" uid="uid://c4yxppbrnwinw" path="res://timer.gd" id="6_1ainy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vonw3"]
+size = Vector2(20, 667)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oi3di"]
+size = Vector2(1181, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f2txt"]
+size = Vector2(1176, 20)
+
+[node name="Level" type="Node2D"]
+script = ExtResource("1_n6hdu")
+
+[node name="Track" type="Node2D" parent="."]
+script = ExtResource("1_f2txt")
+
+[node name="TextureRect1" type="TextureRect" parent="Track"]
+offset_left = -56.0
+offset_top = -71.0
+offset_right = 1224.0
+offset_bottom = 649.0
+texture = ExtResource("1_0b4ue")
+
+[node name="TextureRect2" type="TextureRect" parent="Track"]
+offset_left = -56.0
+offset_top = -789.0
+offset_right = 1224.0
+offset_bottom = -69.0
+texture = ExtResource("1_0b4ue")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Left" type="StaticBody2D" parent="Node2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Left"]
+position = Vector2(384, 326)
+shape = SubResource("RectangleShape2D_vonw3")
+
+[node name="right" type="StaticBody2D" parent="Node2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/right"]
+position = Vector2(785, 319)
+shape = SubResource("RectangleShape2D_vonw3")
+
+[node name="TB Borders" type="CharacterBody2D" parent="Node2D"]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D/TB Borders"]
+position = Vector2(586, 642)
+shape = SubResource("RectangleShape2D_oi3di")
+one_way_collision = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Node2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D"]
+position = Vector2(578, 0)
+shape = SubResource("RectangleShape2D_f2txt")
+
+[node name="Player" parent="." instance=ExtResource("1_u52ul")]
+position = Vector2(723, 594)
+script = ExtResource("2_vonw3")
+
+[node name="car" parent="." instance=ExtResource("4_f2txt")]
+position = Vector2(467, 594)
+
+[node name="Timer" type="CanvasLayer" parent="."]
+script = ExtResource("6_1ainy")
+
+[node name="TimerLabel" type="Label" parent="Timer"]
+offset_left = 225.0
+offset_top = 25.0
+offset_right = 324.0
+offset_bottom = 71.0
+
+[node name="ResultLabel" type="Label" parent="Timer"]
+offset_right = 40.0
+offset_bottom = 23.0

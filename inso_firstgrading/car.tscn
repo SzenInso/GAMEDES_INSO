@@ -1,0 +1,29 @@
+[gd_scene load_steps=8 format=3 uid="uid://dpfhuebpsan51"]
+
+[ext_resource type="PackedScene" uid="uid://dmsgvguhqii4b" path="res://neon.tscn" id="1_06lh1"]
+[ext_resource type="Script" uid="uid://cjvpqpucvjx5v" path="res://neon.gd" id="2_06lh1"]
+[ext_resource type="PackedScene" uid="uid://cvhtfnrkemecb" path="res://cobalt.tscn" id="2_td361"]
+[ext_resource type="PackedScene" uid="uid://bbnkcpgbjv4mr" path="res://checks.tscn" id="3_72krn"]
+[ext_resource type="Script" uid="uid://cqllw31gnugx4" path="res://cobalt.gd" id="4_72krn"]
+[ext_resource type="Script" uid="uid://bhuvura6loi87" path="res://checks.gd" id="6_v0hk8"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_06lh1"]
+normal = Vector2(-0.0142843, -0.999898)
+
+[node name="car" type="CharacterBody2D"]
+
+[node name="Neon" parent="." instance=ExtResource("1_06lh1")]
+script = ExtResource("2_06lh1")
+
+[node name="Cobalt" parent="." instance=ExtResource("2_td361")]
+position = Vector2(77, 0)
+script = ExtResource("4_72krn")
+
+[node name="Checks" parent="." instance=ExtResource("3_72krn")]
+position = Vector2(156, -2)
+script = ExtResource("6_v0hk8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("WorldBoundaryShape2D_06lh1")

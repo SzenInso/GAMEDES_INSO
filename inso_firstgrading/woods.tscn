@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1iv68i2ek8ns"]
+
+[ext_resource type="Texture2D" uid="uid://cungt806piiog" path="res://assets/cars/Mark III_Woods.png" id="1_ed30a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3ss0w"]
+size = Vector2(28, 50)
+
+[node name="Woods" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ed30a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_3ss0w")

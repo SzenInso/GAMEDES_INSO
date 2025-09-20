@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmsgvguhqii4b"]
+
+[ext_resource type="Texture2D" uid="uid://dgltxk5hkip4n" path="res://assets/cars/Mark III_Neon.png" id="1_bxe8s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xl8rs"]
+size = Vector2(28, 50)
+
+[node name="Neon" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_bxe8s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_xl8rs")
